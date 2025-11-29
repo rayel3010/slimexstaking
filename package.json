@@ -10,9 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@web3modal/ethereum": "^2.7.1",
+    "@web3modal/wagmi": "^5.1.11",
     "ethers": "^6.15.0",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "viem": "^2.40.3",
+    "wagmi": "^3.0.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
