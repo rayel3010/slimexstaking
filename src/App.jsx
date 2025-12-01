@@ -59,22 +59,37 @@ function App() {
         </nav>
 
         {/* Sidebar footer */}
-        <div className="px-4 py-4 border-t border-white/5 text-[11px] text-text-dim">
-          <div className="flex items-center justify-between mb-1">
-            <span>Network</span>
-            <span className="text-xs text-neon-cyan">
-              {selectedNetwork === "ethereum"
-                ? "Ethereum"
-                : selectedNetwork === "base"
-                ? "Base"
-                : "Arbitrum"}
-            </span>
-          </div>
-          <div className="flex items-center justify-between">
-            <span>Program</span>
-            <span className="text-xs text-text-dim">SlimeX Points v1</span>
-          </div>
-        </div>
+<div className="px-4 py-4 border-t border-white/5 text-[11px] text-text-dim space-y-1">
+
+  <div className="flex items-center justify-between mb-1">
+    <span>Network</span>
+    <span className="text-xs text-neon-cyan">
+      {selectedNetwork === "ethereum"
+        ? "Ethereum"
+        : selectedNetwork === "base"
+        ? "Base"
+        : "Arbitrum"}
+    </span>
+  </div>
+
+  <div className="flex items-center justify-between">
+    <span>Program</span>
+    <span className="text-xs text-text-dim">SlimeX Points v1</span>
+  </div>
+
+  {/* Email Support */}
+  <div className="pt-2 border-t border-white/5">
+    <span className="block">Support</span>
+    <a
+      href="mail:support@slimexnft.xyz"
+      className="text-xs text-neon-cyan hover:underline"
+    >
+      support@slimexnft.xyz
+    </a>
+  </div>
+
+</div>
+
       </aside>
 
       {/* MAIN */}
@@ -295,53 +310,68 @@ function SettingsView({ selectedNetwork, setSelectedNetwork }) {
         </div>
       </section>
 
-      {/* RIGHT SIDE – Community links giữ nguyên */}
-      <section className="space-y-6">
-        <div className="rounded-2xl border border-neon-purple/40 bg-gradient-to-br from-neon-purple/15 to-night-soft/80 p-6 shadow-neon-soft">
-          <h3 className="font-semibold text-sm mb-2">Community & Links</h3>
-          <p className="text-xs text-text-dim mb-4">
-            Official links for the SlimeX ecosystem.
-          </p>
+      {/* RIGHT SIDE – Community links */} 
+<section className="space-y-6">
+  <div className="rounded-2xl border border-neon-purple/40 bg-gradient-to-br from-neon-purple/15 to-night-soft/80 p-6 shadow-neon-soft">
 
-          <div className="space-y-4 text-xs">
-            {/* X / Twitter */}
-            <div className="flex items-center justify-between gap-3">
-              <div>
-                <div className="font-semibold">X (Twitter)</div>
-                <div className="text-text-dim">
-                  Official SlimeX Twitter account.
-                </div>
-              </div>
-              <a
-                href="https://x.com/NFTSlimeX"
-                target="_blank"
-                rel="noreferrer"
-                className="px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-[11px] transition"
-              >
-                Open X
-              </a>
-            </div>
+    <h3 className="font-semibold text-sm mb-2">Community & Links</h3>
+    <p className="text-xs text-text-dim mb-4">
+      Official links for the SlimeX ecosystem.
+    </p>
 
-            {/* Discord */}
-            <div className="flex items-center justify-between gap-3 pt-3 border-t border-white/10">
-              <div>
-                <div className="font-semibold">Discord</div>
-                <div className="text-text-dim">
-                  Official SlimeX Discord community.
-                </div>
-              </div>
-              <a
-                href="https://discord.gg/tfp6Gje6"
-                target="_blank"
-                rel="noreferrer"
-                className="px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-[11px] transition"
-              >
-                Open Discord
-              </a>
-            </div>
-          </div>
+    <div className="space-y-4 text-xs">
+
+      {/* X / Twitter */}
+      <div className="flex items-center justify-between gap-3">
+        <div>
+          <div className="font-semibold">X (Twitter)</div>
+          <div className="text-text-dim">Official SlimeX Twitter account.</div>
         </div>
-      </section>
+        <a
+          href="https://x.com/NFTSlimeX"
+          target="_blank"
+          rel="noreferrer"
+          className="px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-[11px] transition"
+        >
+          Open X
+        </a>
+      </div>
+
+      {/* Discord */}
+      <div className="flex items-center justify-between gap-3 pt-3 border-t border-white/10">
+        <div>
+          <div className="font-semibold">Discord</div>
+          <div className="text-text-dim">Official SlimeX Discord community.</div>
+        </div>
+        <a
+          href="https://discord.gg/tfp6Gje6"
+          target="_blank"
+          rel="noreferrer"
+          className="px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-[11px] transition"
+        >
+          Open Discord
+        </a>
+      </div>
+
+      {/* Linktree */}
+      <div className="flex items-center justify-between gap-3 pt-3 border-t border-white/10">
+        <div>
+          <div className="font-semibold">Linktree</div>
+          <div className="text-text-dim">All official SlimeX links in one place.</div>
+        </div>
+        <a
+          href="https://linktr.ee/nftslimex"
+          target="_blank"
+          rel="noreferrer"
+          className="px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-[11px] transition"
+        >
+          Open Linktree
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
     </div>
   );
 }
